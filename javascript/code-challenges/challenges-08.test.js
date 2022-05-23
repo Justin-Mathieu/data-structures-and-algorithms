@@ -55,7 +55,6 @@ let characters = [
 const sortByChildren = (charArray) => {
   let arr = charArray.sort((a, b) => b.children.length - a.chidren.length);
   return arr;
-
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -108,7 +107,7 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  return str.match(/[A-Z]\w/gm);
+  return str.match(/[A-Z]\w*/gm) || [];
 
 };
 
