@@ -63,7 +63,6 @@ const sortByChildren = (charArray) => {
 
   });
   return arr;
-
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -118,6 +117,8 @@ Return an array containing all the matches.
 const isCapitalized = (str) => {
   let results = str.match(/\b[A-Z][a-z]*/g);
   return results || [];
+
+
 };
 
 /* ------------------------------------------------------------------------------------------------
