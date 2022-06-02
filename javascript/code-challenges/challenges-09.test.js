@@ -10,7 +10,9 @@ E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => {
 
-  // return arr.reduce((pv, cv) => pv < cv ? pv);
+  return arr.reduce((a, b) => {
+    return Math.max(a, b);
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -147,11 +149,20 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
+  let answer = false;
   arr.forEach(obj => {
-    if (character = )
-      Object.values(obj).forEach(item => item.includes([]));
-  });
+    if (character === obj.name) {
+      let thing = Object.values(obj);
+      thing.forEach(thing2 => {
+        if (Array.isArray(thing2)) {
+          answer = true;
+        }
+      });
+    }
 
+  }
+  );
+  return answer;
 };
 
 /* ------------------------------------------------------------------------------------------------
