@@ -87,3 +87,4 @@ Note that when you check your code into GitHub, all of your tests will automatic
 ## Code Challenge Links
 
 [Array-Reverse](./code-challenges/array-reverse/README.md)  
+[Array-Insert-Shift](./code-challenges/array-insert-shift/README.md)  
