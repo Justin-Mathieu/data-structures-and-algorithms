@@ -1,29 +1,28 @@
+import { Node } from "@babel/traverse";
+import { append } from "../../node_modules/cheerio/lib/api/manipulation";
 import { Collection, display } from "./Collection";
 
 export class LinkedList<T> implements Collection<T> {
-  start: Node<T> | undefined;
+  head: Node<T> | undefined;
   insert(item: T) {
-    this.start = {
+    this.head = {
       item: item,
-      next: this.start,
-
+      next: this.head,
     };
-
   }
   includes(item: T): boolean {
-    let current = this.start;
+    let current = this.head;
     while (current !== undefined) {
       if (current.item === item) {
         return true;
       }
-      current = current.next
-
+      current = current.next;
     }
     return false;
   }
   toString(): string {
-    let current = this.start;
-    let str = '';
+    let current = this.head;
+    let str = "";
     while (current !== undefined) {
       let item = display(current.item);
       str += `{ ${current.item} } -> `;
@@ -31,7 +30,54 @@ export class LinkedList<T> implements Collection<T> {
     }
     return `${str}NULL`;
   }
+
+  append(item: T): void {
+    let current = this.head;
+    const newNode = { item: item, next: undefined };
+    if (this.head === undefined) {
+      this.insert(item);
+      return;
+    } else {
+      while (current.next) {
+        current = current.next;
+      }
+      current.next = newNode;
+    }
+  }
+
+  insertBefore(value: T, item: T): void {
+    let current = this.head;
+    if (current.item === value) {
+      this.insert(item);
+    } else if (!this.includes(value)) {
+      throw new Error("Not found in list");
+    } else {
+      while (current.next.item !== value) {
+        current = current.next;
+      }
+      const stashed = current.next;
+      const newNode = { item: item, next: stashed };
+      current.next = newNode;
+    }
+  }
+
+  insertAfter(value: T, item: T) {
+    let current = this.head;
+    if (current.item === value) {
+      this.insert(item);
+    } else if (!this.includes(value)) {
+      throw new Error("Not found in list");
+    } else {
+      while (current.next.item !== value) {
+        current = current.next;
+      }
+      const stashed = current.next;
+      const newNode = { item: item, next: stashed };
+      current.next = newNode;
+    }
+  }
 }
+
 interface Node<T> {
   item: T;
   next: Node<T> | undefined;
