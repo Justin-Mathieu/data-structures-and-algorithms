@@ -89,3 +89,5 @@ Note that when you check your code into GitHub, all of your tests will automatic
 [Array-Reverse](./code-challenges/array-reverse/README.md)  
 [Array-Insert-Shift](./code-challenges/array-insert-shift/README.md)  
 [Array-Binary-Search](./code-challenges/array-binary-search/README.md)  
+[Linked List Implementation](linked-list/README.md)  
+[Linked List Insertion](linked-list/README.md)
