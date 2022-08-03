@@ -30,7 +30,7 @@ export class LinkedList<T> implements Collection<T> {
     }
     return `${str}NULL`;
   }
-
+  // Code challenge 06
   append(item: T): void {
     let current = this.head;
     const newNode = { item: item, next: undefined };
@@ -45,12 +45,12 @@ export class LinkedList<T> implements Collection<T> {
     }
   }
 
-  insertBefore(value: T, item: T): void {
+  insertBefore(value: T, item: T) {
     let current = this.head;
     if (current.item === value) {
       this.insert(item);
     } else if (!this.includes(value)) {
-      throw new Error("Not found in list");
+      return "Not found in list";
     } else {
       while (current.next.item !== value) {
         current = current.next;
@@ -62,13 +62,12 @@ export class LinkedList<T> implements Collection<T> {
   }
 
   insertAfter(value: T, item: T) {
+    let Node1 = { item: item, next: undefined };
     let current = this.head;
     if (current.item === value) {
-      this.insert(item);
-    } else if (!this.includes(value)) {
-      throw new Error("Not found in list");
+      current.next = Node1;
     } else {
-      while (current.next.item !== value) {
+      while (current.item !== value) {
         current = current.next;
       }
       const stashed = current.next;
@@ -76,6 +75,8 @@ export class LinkedList<T> implements Collection<T> {
       current.next = newNode;
     }
   }
+  // Code challenge 07
+  //   kth(k: T) {
 }
 
 interface Node<T> {
