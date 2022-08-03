@@ -46,7 +46,7 @@ list.tostring();`
 
 # Linked List Insertion
 
-Write Methods on the linked list class that add a node before and after a specified node. adda method that appends a node to the end of the list.  
+Write Methods on the linked list class that add a node before and after a specified node. add a method that appends a node to the end of the list.  
 
 ## Whiteboard Process
 
@@ -69,3 +69,34 @@ we have been in a group reviewing eachothers code and they have been super helpf
 ## Notes
 
 I have not yet gotten my tests to run. There might be an issue with my configuration.
+
+
+# Linked List Kth From End
+
+Write a method that takes in a number(k) and returns the value of the node this at numbers "index" from the end.
+
+## Whiteboard Process
+
+N/A
+
+## Approach & Efficiency
+
+I first checked the value of k against the length of the list and threw an error if the value was larger or equal to length of the list. I then iterated over the list and pushed the values to an array which I reversed and returned the vlaue at the index of k. This probaby was not the most efficient way to do this.  
+
+## Solution
+
+Method on linked list class.  
+
+
+    const list = new LinkedList<number>();
+
+    list.insert(1);
+    list.insert(2);
+    list.insert(3);
+    list.insert(4);
+
+    list.kthFromTheEnd(1);
+
+
+ returns: 3
+ 

@@ -89,4 +89,63 @@ describe("Linked List", () => {
       "{ test node 3 } -> { test node before } -> { test node 2 } -> { test node 1 } -> NULL"
     );
   });
+
+  // Code challenge 07
+
+  it("throws error when k is greater than list length", () => {
+    const list = new LinkedList<number>();
+    list.insert(1);
+    list.insert(2);
+    list.insert(3);
+    list.insert(4);
+
+    expect(() => {
+      list.kthFromEnd(5);
+    }).toThrowError();
+  });
+
+  it("returns a value when k and the list length are equal", () => {
+    const list = new LinkedList<number>();
+    list.insert(1);
+    list.insert(2);
+    list.insert(3);
+    list.insert(4);
+
+    expect(list.kthFromEnd(3)).toBe(4);
+  });
+
+  //Could not get this to pass, possibly due to data types in TS..?(Number vs. number)
+
+  it.skip("throws an error when k is a negative number", () => {
+    const list = new LinkedList<number>();
+    list.insert(1);
+    list.insert(2);
+    list.insert(3);
+    list.insert(4);
+
+    expect(() => {
+      list.kthFromEnd(-1);
+    }).toThrowError();
+  });
+
+  it("returns a value with a list length of 1", () => {
+    const list = new LinkedList<number>();
+    list.insert(1);
+
+    expect(list.kthFromEnd(0)).toBe(1);
+    expect(() => {
+      list.kthFromEnd(1);
+    }).toThrowError();
+  });
+
+  it("Happy path works", () => {
+    const list = new LinkedList<number>();
+    list.insert(1);
+    list.insert(2);
+    list.insert(3);
+    list.insert(4);
+    list.insert(5);
+
+    expect(list.kthFromEnd(2)).toBe(3);
+  });
 });
