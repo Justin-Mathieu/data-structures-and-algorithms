@@ -4,12 +4,16 @@ import { Collection, display } from "./Collection";
 
 export class LinkedList<T> implements Collection<T> {
   head: Node<T> | undefined;
+  length = 0;
+
   insert(item: T) {
     this.head = {
       item: item,
       next: this.head,
     };
+    this.length += 1;
   }
+
   includes(item: T): boolean {
     let current = this.head;
     while (current !== undefined) {
@@ -30,6 +34,7 @@ export class LinkedList<T> implements Collection<T> {
     }
     return `${str}NULL`;
   }
+
   // Code challenge 06
   append(item: T): void {
     let current = this.head;
@@ -43,6 +48,7 @@ export class LinkedList<T> implements Collection<T> {
       }
       current.next = newNode;
     }
+    this.length += 1;
   }
 
   insertBefore(value: T, item: T) {
@@ -59,6 +65,7 @@ export class LinkedList<T> implements Collection<T> {
       const newNode = { item: item, next: stashed };
       current.next = newNode;
     }
+    this.length += 1;
   }
 
   insertAfter(value: T, item: T) {
@@ -74,9 +81,57 @@ export class LinkedList<T> implements Collection<T> {
       const newNode = { item: item, next: stashed };
       current.next = newNode;
     }
+    this.length += 1;
   }
-  // Code challenge 07
-  //   kth(k: T) {
+
+  //Expertiment with kthFromEnd using an array (Probably not the best solution...)
+
+  kthFromEnd(k: number) {
+    let current = this.head;
+    let anArray = [];
+    if (this.length <= k) {
+      throw new Error("Not in list");
+    } else {
+      while (current !== undefined) {
+        anArray.push(current.item);
+        current = current.next;
+      }
+
+      anArray.reverse();
+      return anArray[k];
+    }
+  }
+
+  //Code Challenge 08 Zip
+  static zip(list1: LinkedList<any>, list2: LinkedList<any>) {
+    let newList = new LinkedList();
+    let currentll1 = list1.head;
+    let currentll2 = list2.head;
+
+    let counter = 0;
+    while (currentll1 && currentll2) {
+      if (counter % 2 === 0) {
+        newList.append(currentll1?.item);
+        currentll1 = currentll1?.next;
+      }
+      if (counter % 2 !== 0) {
+        newList.append(currentll2?.item);
+        currentll2 = currentll2?.next;
+      }
+
+      counter += 1;
+    }
+
+    if (currentll1 === undefined) {
+      newList.append(currentll2?.item);
+      currentll1 = currentll2?.next;
+    }
+    if (currentll2 === undefined) {
+      newList.append(currentll1?.item);
+      currentll2 = currentll1?.next;
+    }
+    return newList;
+  }
 }
 
 interface Node<T> {
