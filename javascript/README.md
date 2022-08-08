@@ -86,9 +86,11 @@ Note that when you check your code into GitHub, all of your tests will automatic
 
 ## Code Challenge Links
 
-[Array-Reverse](./code-challenges/array-reverse/README.md)  
-[Array-Insert-Shift](./code-challenges/array-insert-shift/README.md)  
-[Array-Binary-Search](./code-challenges/array-binary-search/README.md)  
-[Linked List Implementation](linked-list/README.md)  
-[Linked List Insertion](linked-list/README.md)
-[Linked List Kth From End](linked-list/README.md)
+[Code Challenge 01 (Array Reverse)](./code-challenges/array-reverse/README.md)  
+[Code Challenge 02 (Array Insert shift)](./code-challenges/array-insert-shift/README.md)  
+[Code Challenge 03 (Array Binary Search)](./code-challenges/array-binary-search/README.md)  
+[Code Challenge 05 (Linked List Implementation)](linked-list/Challenge-05-README.md)  
+[Code Challenge 06 (Linked List Insertion )](linked-list/Challenge-06-README.md)  
+[Code Challenge 07 (Kth From End)](linked-list/Challenge-07-README.md)  
+[Code Challenge 08 (Zip)](linked-list/Challenge-08-README.md)  
+

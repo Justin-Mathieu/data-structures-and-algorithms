@@ -101,7 +101,39 @@ export class LinkedList<T> implements Collection<T> {
       return anArray[k];
     }
   }
+
+  //Code Challenge 08 Zip
+  static zip(list1: LinkedList<any>, list2: LinkedList<any>) {
+    let newList = new LinkedList();
+    let currentll1 = list1.head;
+    let currentll2 = list2.head;
+
+    let counter = 0;
+    while (currentll1 && currentll2) {
+      if (counter % 2 === 0) {
+        newList.append(currentll1?.item);
+        currentll1 = currentll1?.next;
+      }
+      if (counter % 2 !== 0) {
+        newList.append(currentll2?.item);
+        currentll2 = currentll2?.next;
+      }
+
+      counter += 1;
+    }
+
+    if (currentll1 === undefined) {
+      newList.append(currentll2?.item);
+      currentll1 = currentll2?.next;
+    }
+    if (currentll2 === undefined) {
+      newList.append(currentll1?.item);
+      currentll2 = currentll1?.next;
+    }
+    return newList;
+  }
 }
+
 interface Node<T> {
   item: T;
   next: Node<T> | undefined;
