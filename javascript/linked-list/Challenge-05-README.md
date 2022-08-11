@@ -4,7 +4,8 @@
 
 ## Whiteboard Process
 
-N/A
+![Code Challenge 08](./img/cc05.png)
+
 
 ## Approach & Efficiency
 
