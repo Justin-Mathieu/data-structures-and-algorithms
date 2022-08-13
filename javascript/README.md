@@ -93,4 +93,5 @@ Note that when you check your code into GitHub, all of your tests will automatic
 [Code Challenge 06 (Linked List Insertion )](linked-list/Challenge-06-README.md)  
 [Code Challenge 07 (Kth From End)](linked-list/Challenge-07-README.md)  
 [Code Challenge 08 (Zip)](linked-list/Challenge-08-README.md)  
+[Code Challenge 10 (Stacks and Queues)](stacks-queues/Challenge-10-README.md)  
 
