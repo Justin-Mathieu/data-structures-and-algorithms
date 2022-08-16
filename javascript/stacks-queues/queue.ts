@@ -21,7 +21,7 @@ export class Queue<T> {
   }
 
   enqueue(t: T): void {
-    let newNode = { item: t, next: undefined };
+    let newNode = { item: t, next: this.front };
 
     if (this.front === undefined) {
       this.front = newNode;
@@ -42,8 +42,8 @@ export class Queue<T> {
     return this.front.item;
   }
 
-  isEmpty(stack: Queue<T>): boolean {
-    if (this.front) {
+  isEmpty(queue: Queue<T>): boolean {
+    if (this.front !== undefined) {
       return true;
     } else {
       return false;
