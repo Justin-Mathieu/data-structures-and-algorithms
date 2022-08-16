@@ -4,7 +4,7 @@ Write a method that takes in a number(k) and returns the value of the node this 
 
 ## Whiteboard Process
 
-N/A
+![Code Challenge 07](./img/cc07.png)
 
 ## Approach & Efficiency
 
