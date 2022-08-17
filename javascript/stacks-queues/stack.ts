@@ -27,13 +27,12 @@ export class Stack<T> {
   }
 
   pop(): T {
-    let remove = this.top;
-    if (remove !== undefined) {
-      remove = remove.next;
+    if (this.top !== undefined) {
+      this.top = this.top.next;
     } else {
       throw new Error("Empty LIst");
     }
-    return remove.item;
+    return this.top.item;
   }
 
   isEmpty(stack: Stack<T>): boolean {

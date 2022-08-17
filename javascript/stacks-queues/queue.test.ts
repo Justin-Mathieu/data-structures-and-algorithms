@@ -34,7 +34,7 @@ describe("Queue", () => {
   it(" isEmpty returns a boolean", () => {
     const q = new Queue<string>();
 
-    expect(q.isEmpty).toBe(true);
+    expect(q.isEmpty(q)).toBe(true);
     q.enqueue("test1");
     expect(q.isEmpty(q)).toBe(false);
   });
@@ -42,11 +42,8 @@ describe("Queue", () => {
   it("peek should return the value of the head node", () => {
     const q = new Queue<string>();
 
-    q.enqueue("test1");
-    q.enqueue("test2");
-    q.enqueue("test3");
-    q.enqueue("test4");
+    q.enqueue("test");
 
-    expect(q.peek).toBe("test1");
+    expect(q.peek).toBe("test");
   });
 });
