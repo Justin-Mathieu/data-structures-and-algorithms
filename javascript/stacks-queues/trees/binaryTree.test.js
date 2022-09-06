@@ -26,7 +26,15 @@ describe('Binary Tree', () => {
 
   it('does an pre-order traversal (root, left, right)', () => {
     expect(tree.preOrder()).toEqual([1, 7, 2, 6, 3, 11, 9, 9, 5]);
+
+
   });
+
+  it('returns the highest number', () => {
+    expect(tree.treeMax()).toEqual(11);
+
+  });
+
 });
 
 

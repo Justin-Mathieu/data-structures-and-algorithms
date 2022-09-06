@@ -118,6 +118,11 @@ class BinaryTree {
   postOrder() {
     return postOrder(this.root);
   }
+
+  treeMax() {
+    let array = inOrder(this.root);
+    return Math.max(...array);
+  }
 }
 
 
