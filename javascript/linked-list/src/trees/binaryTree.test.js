@@ -1,4 +1,4 @@
-const { BinaryTree, Node } = require('./binaryTree.js');
+const { BinaryTree, Node, breadthFirst } = require('./binaryTree.js');
 
 describe('Binary Tree', () => {
   const tree = new BinaryTree(
@@ -26,7 +26,19 @@ describe('Binary Tree', () => {
 
   it('does an pre-order traversal (root, left, right)', () => {
     expect(tree.preOrder()).toEqual([1, 7, 2, 6, 3, 11, 9, 9, 5]);
+
+
+  });
+
+  it('returns the highest number', () => {
+    expect(tree.treeMax()).toEqual(11);
+
+  });
+
+  it('does a breasdtrh first trasversal', () => {
+    expect(breadthFirst(tree)).toEqual([1, 7, 9, 2, 6, 9, 3, 11, 5]);
   });
 });
+
 
 
