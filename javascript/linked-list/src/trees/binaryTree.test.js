@@ -1,4 +1,4 @@
-const { BinaryTree, Node } = require('./binaryTree.js');
+const { BinaryTree, Node, breadthFirst } = require('./binaryTree.js');
 
 describe('Binary Tree', () => {
   const tree = new BinaryTree(
@@ -35,6 +35,10 @@ describe('Binary Tree', () => {
 
   });
 
+  it('does a breasdtrh first trasversal', () => {
+    expect(breadthFirst(tree)).toEqual([1, 7, 9, 2, 6, 9, 3, 11, 5]);
+  });
 });
+
 
 

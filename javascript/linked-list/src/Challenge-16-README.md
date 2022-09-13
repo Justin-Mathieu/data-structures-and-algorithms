@@ -1,4 +1,4 @@
-# Code Challenge 08 (Zip)
+# Code Challenge 16 (Binary Tree Max Method)
 
 Write a Method on the binary tree class that finds the max value in the tree. 
 
