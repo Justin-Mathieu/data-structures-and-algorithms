@@ -1,4 +1,4 @@
-const { BinaryTree, Node, breadthFirst } = require('./binaryTree.js');
+const { BinaryTree, Node, breadthFirst, treeFizzBuzz } = require('./binaryTree.js');
 
 describe('Binary Tree', () => {
   const tree = new BinaryTree(
@@ -35,8 +35,13 @@ describe('Binary Tree', () => {
 
   });
 
-  it('does a breasdtrh first trasversal', () => {
+  it('does a breadth first trasversal', () => {
     expect(breadthFirst(tree)).toEqual([1, 7, 9, 2, 6, 9, 3, 11, 5]);
+  });
+
+  it('Replcaes values with FizzBuzz', () => {
+    console.log(treeFizzBuzz(tree));
+    expect(treeFizzBuzz(tree).postOrder()).toEqual(['2', 'Fizz', '11', 'Fizz', '7', 'Buzz', 'Fizz', 'Fizz', '1']);
   });
 });
 

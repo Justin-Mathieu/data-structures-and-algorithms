@@ -1,4 +1,3 @@
-const { isForInStatement } = require("typescript");
 
 function preOrder(root) {
   // Root, Left, Right
@@ -74,17 +73,52 @@ function breadthFirst(tree) {
 
 }
 
+
+function treeFizzBuzz(tree) {
+  if (!tree.root) {
+    return null;
+  }
+  let root = tree.root;
+  let queue = [];
+  queue.push(root);
+
+  while (queue.length > 0) {
+    let front = queue.shift();
+    if (front.value % 3 === 0) {
+      front.value = 'Fizz';
+    }
+    if (front.value % 5 === 0) {
+      front.value = 'Buzz';
+    }
+    if (front.value % 3 === 0 && front.value % 5 === 0) {
+      front.value = 'FizzBuzz';
+    } else { front.value = front.value.toString(); }
+
+    if (front.left) {
+      queue.push(front.left);
+    }
+
+    if (front.right) {
+      queue.push(front.right);
+    }
+
+  }
+  return tree;
+
+
+}
+
 class Node {
   constructor(value, left, right) {
     this.value = value;
-    this.left = left; // A Node
-    this.right = right; // A Node
+    this.left = left;
+    this.right = right;
   }
 
 
   preOrder() {
     let traversal = [];
-    traversal.push(this.value); // Root
+    traversal.push(this.value);
     if (this.left) {
       let leftTraversal = this.left.preOrder();
       traversal = traversal.concat(leftTraversal);
@@ -154,4 +188,4 @@ class BinaryTree {
 }
 
 
-module.exports = { Node, BinaryTree, breadthFirst };
+module.exports = { Node, BinaryTree, breadthFirst, treeFizzBuzz };
