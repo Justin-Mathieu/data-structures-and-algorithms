@@ -4,7 +4,7 @@ Write a function the takes in an array and returns an array in the reverse order
 
 ## Whiteboard Process
 
-![Array Reverse](/code-challenges/array-reverse/array-reverse.png)
+![Array Reverse](./array-reverse.png)
 
 ## Approach & Efficiency
 

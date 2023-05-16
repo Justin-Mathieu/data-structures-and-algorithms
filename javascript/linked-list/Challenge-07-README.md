@@ -8,7 +8,7 @@ Write a method that takes in a number(k) and returns the value of the node this 
 
 ## Approach & Efficiency
 
-I first checked the value of k against the length of the list and threw an error if the value was larger or equal to length of the list. I then iterated over the list and pushed the values to an array which I reversed and returned the vlaue at the index of k. This probaby was not the most efficient way to do this.  
+I first checked the value of k against the length of the list and threw an error if the value was larger or equal to length of the list. I then iterated over the list and pushed the values to an array which I reversed and returned the valaue at the index of k. This probaby was not the most efficient way to do this.  
 
 ## Solution
 

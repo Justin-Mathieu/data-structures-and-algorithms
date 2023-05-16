@@ -105,8 +105,8 @@ function treeFizzBuzz(tree) {
   }
   return tree;
 
-
 }
+
 
 class Node {
   constructor(value, left, right) {
