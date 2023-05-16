@@ -8,5 +8,5 @@ Write a function that takes in an array and a value. The function should insert 
 
 ## Approach & Efficiency
 
-Colllaborated with Eva GTraace Smith to iterate through the array assigning new indexes in a new array and adding the value given to the appropriate place.  
+Colllaborated with Eva Grace Smith to iterate through the array assigning new indexes in a new array and adding the value given to the appropriate place.  
 
