@@ -4,8 +4,9 @@ Write a function that takes in an array and a value. The function should insert 
 
 ## Whiteboard Process
 
-![Array Insert Shift](/code-challenges/array-insert-shift/array-insert-shift.png)
+![Array Insert Shift](/code-challenges/array-insert-shift/Screenshotcc01.png)
 
 ## Approach & Efficiency
 
-Used array.splice to insert at the index found by dividing the length of the array and rounding up.  
+Colllaborated with Eva GTraace Smith to iterate through the array assigning new indexes in a new array and adding the value given to the appropriate place.  
+
