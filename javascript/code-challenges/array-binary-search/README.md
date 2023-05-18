@@ -4,7 +4,7 @@ Write a function that takes in an array and value. Use binary search to find the
 
 ## Whiteboard Process
 
-![Array Binary Search](/code-challenges/array-binary-search/Array-Binary-SearchCC03.png)
+![Array Binary Search](../assets/Array-Binary-SearchCC03.png)
 
 ## Approach & Efficiency
 
