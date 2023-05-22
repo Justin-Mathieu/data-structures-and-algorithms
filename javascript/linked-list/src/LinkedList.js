@@ -1,12 +1,17 @@
-import { Node } from "@babel/traverse";
-import { append } from "../../node_modules/cheerio/lib/api/manipulation";
-import { Collection, display } from "./Collection";
 
-export class LinkedList<T> implements Collection<T> {
-  head: Node<T> | undefined;
-  length = 0;
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
+}
 
-  insert(item: T) {
+class LinkedList {
+  constructor() {
+    this.head = null; s
+  }
+
+  insert(item) {
     this.head = {
       item: item,
       next: this.head,
@@ -14,7 +19,7 @@ export class LinkedList<T> implements Collection<T> {
     this.length += 1;
   }
 
-  includes(item: T): boolean {
+  includes(item) {
     let current = this.head;
     while (current !== undefined) {
       if (current.item === item) {
@@ -24,7 +29,7 @@ export class LinkedList<T> implements Collection<T> {
     }
     return false;
   }
-  toString(): string {
+  toString() {
     let current = this.head;
     let str = "";
     while (current !== undefined) {
@@ -36,7 +41,7 @@ export class LinkedList<T> implements Collection<T> {
   }
 
   // Code challenge 06
-  append(item: T): void {
+  append(item) {
     let current = this.head;
     const newNode = { item: item, next: undefined };
     if (this.head === undefined) {
@@ -51,7 +56,7 @@ export class LinkedList<T> implements Collection<T> {
     this.length += 1;
   }
 
-  insertBefore(value: T, item: T) {
+  insertBefore(value, item) {
     let current = this.head;
     if (current.item === value) {
       this.insert(item);
@@ -68,7 +73,7 @@ export class LinkedList<T> implements Collection<T> {
     this.length += 1;
   }
 
-  insertAfter(value: T, item: T) {
+  insertAfter(value, item) {
     let Node1 = { item: item, next: undefined };
     let current = this.head;
     if (current.item === value) {
@@ -86,7 +91,7 @@ export class LinkedList<T> implements Collection<T> {
 
   //Expertiment with kthFromEnd using an array (Probably not the best solution...)
 
-  kthFromEnd(k: number) {
+  kthFromEnd(k) {
     let current = this.head;
     let anArray = [];
     if (this.length <= k) {
