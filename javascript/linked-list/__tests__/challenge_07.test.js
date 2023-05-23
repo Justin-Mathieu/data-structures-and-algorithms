@@ -1,9 +1,9 @@
-import { LinkedList } from "../src/LinkedList";
+const LinkedList = require('../src/LinkedList');
 
-describe("linked list", () => {
-  describe("kth from end", () => {
-    it("can query kth element", () => {
-      const ll = new LinkedList<number>();
+describe('linked list', () => {
+  describe('kth from end', () => {
+    it('can query kth element', () => {
+      const ll = new LinkedList;
       ll.append(1);
       ll.append(3);
       ll.append(8);
@@ -13,8 +13,8 @@ describe("linked list", () => {
       expect(ll.kthFromEnd(2)).toBe(3);
     });
 
-    it("throws an exception when longer than list", () => {
-      const ll = new LinkedList<number>();
+    it('throws an exception when longer than list', () => {
+      const ll = new LinkedList;
       ll.append(1);
       ll.append(3);
       ll.append(8);

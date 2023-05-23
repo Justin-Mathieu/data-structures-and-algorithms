@@ -4,7 +4,7 @@ Write Methods on the linked list class that add a node before and after a specif
 
 ## Whiteboard Process
 
-N/A
+![whiteboard](../code-challenges/assets/CC06Whiteboard.png)
 
 ## Approach & Efficiency
 

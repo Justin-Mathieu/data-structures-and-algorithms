@@ -8,7 +8,7 @@ class Node {
 
 class LinkedList {
   constructor() {
-    this.head = null; s
+    this.head = null;
   }
 
   insert(item) {
@@ -33,7 +33,6 @@ class LinkedList {
     let current = this.head;
     let str = "";
     while (current !== undefined) {
-      let item = display(current.item);
       str += `{ ${current.item} } -> `;
       current = current.next;
     }
@@ -108,7 +107,7 @@ class LinkedList {
   }
 
   //Code Challenge 08 Zip
-  static zip(list1: LinkedList<any>, list2: LinkedList<any>) {
+  static zip(list1, list2) {
     let newList = new LinkedList();
     let currentll1 = list1.head;
     let currentll2 = list2.head;
@@ -139,7 +138,4 @@ class LinkedList {
   }
 }
 
-interface Node<T> {
-  item: T;
-  next: Node<T> | undefined;
-}
+module.exports = LinkedList;
