@@ -5,11 +5,11 @@ Write a function that takes in two Linked lists and returns a new list with the 
 
 ## Whiteboard Process
 
-![Code Challenge 08](./img/cc08.png)
+![Code Challenge 08](./img/CC08WhiteBoard.png)
 
 ## Approach & Efficiency
 
-Added a couter variable to check for evens and odds and appended the nodes from list 1 on the even counts and the nodes from list 2 on the odd count. theni checked for if the lists were longer and appended the rest of the remaining list.
+Added a couter variable to check for evens and odds and appended the nodes from list 1 on the even counts and the nodes from list 2 on the odd count. then I checked for if the lists were longer and appended the rest of the remaining list.
 
 ## Solution
 
