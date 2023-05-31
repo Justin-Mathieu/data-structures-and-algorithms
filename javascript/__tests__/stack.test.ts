@@ -1,4 +1,4 @@
-import { Stack } from "./stack";
+import { Stack } from "../stacks-queues/stack";
 
 xdescribe("Stack", () => {
   it("can push", () => {

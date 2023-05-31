@@ -1,4 +1,4 @@
-import { Queue } from "./queue";
+import { Queue } from "../stacks-queues/queue";
 
 describe("Queue", () => {
   it("can enqueue", () => {

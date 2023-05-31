@@ -1,4 +1,4 @@
-const balancedBrackets = require('./brackets');
+const balancedBrackets = require('../src/stacks-queues/brackets');
 
 describe('Balanced Brackets', () => {
   it.each([

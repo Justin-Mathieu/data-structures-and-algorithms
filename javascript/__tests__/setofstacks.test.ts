@@ -1,4 +1,4 @@
-import { SetOfStacks } from "./setofstacks.ts";
+import { SetOfStacks } from "../stacks-queues/setofstacks.js";
 
 describe("SetOfStacks", () => {
   it("peeks and pops", () => {

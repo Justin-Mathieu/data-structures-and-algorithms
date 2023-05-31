@@ -86,12 +86,22 @@ Note that when you check your code into GitHub, all of your tests will automatic
 
 ## Code Challenge Links
 
-[Code Challenge 01 (Array Reverse)](./code-challenges/array-reverse/README.md)  
 [Code Challenge 02 (Array Insert shift)](./code-challenges/array-insert-shift/README.md)  
 [Code Challenge 03 (Array Binary Search)](./code-challenges/array-binary-search/README.md)  
-[Code Challenge 05 (Linked List Implementation)](linked-list/Challenge-05-README.md)  
-[Code Challenge 06 (Linked List Insertion )](linked-list/Challenge-06-README.md)  
-[Code Challenge 07 (Kth From End)](linked-list/Challenge-07-README.md)  
-[Code Challenge 08 (Zip)](linked-list/Challenge-08-README.md)  
-[Code Challenge 10 (Stacks and Queues)](stacks-queues/Challenge-10-README.md)  
+[Mock Interview 01](./code-challenges/mockInterview1/README.md)  
+[Code Challenge 05 (Linked List Implementation)](./linked-list/README/Challenge-05-README.md)  
+[Code Challenge 06 (Linked List Insertion )](linked-list/README/Challenge-06-README.md)  
+[Code Challenge 07 (Kth From End)](linked-list/README/Challenge-07-README.md)  
+[Code Challenge 08 (Zip)](linked-list//README/CHallenge%2008-README.md)  
+[Code Challenge 10 (Stacks and Queues)](stacks-queues/README/Challenge-10-README.md)  
+[Code Challenge 11 (Stacks and Queues)](stacks-queues/README/Challenge-11-README.md)  
+[Code Challenge 12 (Stacks and Queues)](stacks-queues/README/Challenge-12-README.md)  
+[Code Challenge 13 (Stacks and Queues)](stacks-queues/README/Challenge-11-README.md)  
+[Code Challenge 14 (Stacks and Queues)](stacks-queues/README/Challenge-11-README.md)  
+[Code Challenge 15 (Stacks and Queues)](stacks-queues/README/Challenge-11-README.md)  
+[Code Challenge 16 (Stacks and Queues)](stacks-queues/README/Challenge-11-README.md)  
+[Code Challenge 17 (Stacks and Queues)](stacks-queues/README/Challenge-11-README.md)  
+[Code Challenge 18 (Stacks and Queues)](stacks-queues/README/Challenge-11-README.md)  
+[Code Challenge 19 (Stacks and Queues)](stacks-queues/Challenge-10-README.md)  
+[Code Challenge 20 (Stacks and Queues)](stacks-queues/Challenge-10-README.md)  
 
