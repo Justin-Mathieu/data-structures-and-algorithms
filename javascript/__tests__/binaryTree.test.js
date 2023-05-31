@@ -1,4 +1,4 @@
-const { BinaryTree, Node, breadthFirst, treeFizzBuzz } = require('./binaryTree.js');
+const { BinaryTree, Node, breadthFirst, treeFizzBuzz } = require('../trees/binaryTree.js');
 
 describe('Binary Tree', () => {
   const tree = new BinaryTree(

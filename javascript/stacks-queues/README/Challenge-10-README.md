@@ -1,4 +1,5 @@
  # Code Challenge 10(Stacks and Queues)
+
 Write functions to enqueue and dequeue nodes.
 Write a function to push and pop nodes on a stack.
 Write a function that returns the value of the head node.
@@ -10,8 +11,9 @@ Write a function to return a boolean if the list is empty or not.
 
 
 ## Approach & Efficiency
+
 **Enqueue:**
-I iterated to the end of the list and reassigned the next pointer to be a new node.   
+I iterated to the end of the list and reassigned the next pointer to be a new node.
 **Dequeue:**
 I reassigned the second node in the list to be the front of the list.  
 **Peek:**
@@ -21,8 +23,9 @@ Uses if statement to determine if the front or top is defined and returns the ap
 **Push:**
 I assigned a new node to be the top and pointed the next property to the previous node.  
 **Pop:**
-I reassigned the second node to be the top. 
+I reassigned the second node to be the top.  
+
 ## Solution
 Methods on the stack and queue classes to add or remove nodes to stacks or queues.
 Methods to view value of head node of stack or queue.
-method to determine if stack or queue is empty. 
+method to determine if stack or queue is empty.  

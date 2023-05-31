@@ -1,10 +1,10 @@
 # Code Challenge 05(Linked List Implementation)
 
- Create a linked list class and write the methods to insert a node, verfify in a value is included in the list and return a string of the list.
+ Create a linked list class and write the methods to insert a node, verify if a value is included in the list and return a string of the list.
 
 ## Whiteboard Process
 
-![Code Challenge 08](./img/cc05.png)
+![Code Challenge 08](../../assets/cc05.png)
 
 
 ## Approach & Efficiency

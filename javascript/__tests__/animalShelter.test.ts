@@ -1,4 +1,4 @@
-import { Shelter } from "./animalShelter";
+import { Shelter } from "../stacks-queues/animalShelter";
 
 describe("Animal Shelter", () => {
   it("gets the next cat", () => {

@@ -1,7 +1,8 @@
-export class Stack<T> {
-  top: Node<T> | undefined;
-
-  get size(): number {
+class Stack {
+  constructor(top) {
+    this.top = top;
+  }
+  get size() {
     let size = 0;
     let current = this.top;
 
@@ -12,38 +13,36 @@ export class Stack<T> {
     return size;
   }
 
-  get peek(): T {
+  get peek() {
     let current = this.top;
     if (current) {
       return current.item;
     } else {
-      throw new Error("Empty LIst");
+      throw new Error('Empty LIst');
     }
   }
 
-  push(t: T): void {
-    let newNode = { item: t, next: this.top };
+  push(value) {
+    let newNode = { item: value, next: this.top };
     this.top = newNode;
   }
 
-  pop(): T {
+  pop() {
     if (this.top !== undefined) {
       this.top = this.top.next;
     } else {
-      throw new Error("Empty LIst");
+      throw new Error('Empty LIst');
     }
     return this.top.item;
   }
 
-  isEmpty(stack: Stack<T>): boolean {
-    if (this.top) {
+  isEmpty(stack) {
+    if (stack.top) {
       return false;
     } else {
       return true;
     }
   }
 }
-interface Node<T> {
-  item: T;
-  next: Node<T> | undefined;
-}
+
+module.exports = Stack;

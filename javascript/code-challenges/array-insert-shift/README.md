@@ -4,7 +4,7 @@ Write a function that takes in an array and a value. The function should insert 
 
 ## Whiteboard Process
 
-![Array Insert Shift](/code-challenges/array-insert-shift/Screenshotcc01.png)
+![Array Insert Shift](../../assets/Array-Binary-SearchCC03.png)
 
 ## Approach & Efficiency
 

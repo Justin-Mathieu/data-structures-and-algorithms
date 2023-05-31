@@ -1,8 +1,8 @@
-export class Queue<T> {
-  front: Node<T> | undefined;
-  rear: Node<T> | undefined;
+class Queue {
+  front = this.front;
+  rear = this.rear;
 
-  get size(): number {
+  get size() {
     let size = 0;
     let current = this.front;
     while (current) {
@@ -12,7 +12,7 @@ export class Queue<T> {
     return size;
   }
 
-  get peek(): T {
+  get peek() {
     if (this.front !== undefined) {
       return this.front.item;
     } else {
@@ -20,7 +20,7 @@ export class Queue<T> {
     }
   }
 
-  enqueue(t: T): void {
+  enqueue(t) {
     let newNode = { item: t, next: undefined };
 
     if (this.front === undefined) {
@@ -33,7 +33,7 @@ export class Queue<T> {
     }
   }
 
-  dequeue(): T {
+  dequeue() {
     if (this.front !== undefined) {
       this.front = this.front;
     } else {
@@ -42,8 +42,8 @@ export class Queue<T> {
     return this.front.item;
   }
 
-  isEmpty(queue: Queue<T>): boolean {
-    if (this.front !== undefined) {
+  isEmpty(queue) {
+    if (queue.front !== undefined) {
       return false;
     } else {
       return true;
@@ -51,8 +51,3 @@ export class Queue<T> {
   }
 }
 
-interface Node<T> {
-  item: T;
-  next: Node<T> | undefined;
-}
-0;
