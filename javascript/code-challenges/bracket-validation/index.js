@@ -1,53 +1,23 @@
+const Stack = require('../stack-queue-implementation');
 
-
-function bracketValidation(string) {
-  let stack = [];
-  if (string.length === 1) {
-    return false;
-  }
+function validateBrackets(string) {
+  let stack = new Stack();
+  let open = ['(', '[', '{'];
+  let close = [')', ']', '}'];
   for (let i = 0; i < string.length; i++) {
-    if (string[i] === '(' || string[i] === '{' || string[i] === '[') {
+    if (open.includes(string[i])) {
       stack.push(string[i]);
-    }
-    if (string[i] === ')' || string[i] === '}' || string[i] === ']') {
-
-
-
-      switch (stack[stack.length - 1]) {
-        case '(':
-          if (string[i] === ')') {
-            stack.pop();
-
-          }
-          break;
-
-        case '{':
-          if (string[i] === '}') {
-            stack.pop();
-
-          }
-          break;
-
-        case '[':
-          if (string[i] === ']') {
-            stack.pop();
-
-          }
-          break;
-
-
+    } else if (close.includes(string[i])) {
+      let top = stack.pop();
+      if (open.indexOf(top) !== close.indexOf(string[i])) {
+        return false;
       }
     }
-
   }
-
-  if (stack.length > 0) {
+  if (stack.top) {
     return false;
   }
-
-  else {
-    return true;
-  }
+  return true;
 }
 
-module.exports = bracketValidation;
+module.exports = validateBrackets;
