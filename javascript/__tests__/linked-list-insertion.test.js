@@ -1,4 +1,4 @@
-const LinkedList = require('../src/LinkedList');
+const LinkedList = require('../code-challenges/linked-list-implementation');
 
 describe('Linked List', () => {
   it('can append an element', () => {

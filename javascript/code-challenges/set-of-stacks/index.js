@@ -6,15 +6,15 @@ export class SetOfStacks<T> {
   //
   //    let stack = new Stack<T>(this.maxHeight);
   //
-  constructor(private readonly maxHeight: number) {}
+  constructor(private readonly maxHeight: number) { }
 
   push(t: T): void {
     if (this.stackArray.length === 0) {
-      this.stackArray.push(new Stack<T>(this.maxHeight));
+      this.stackArray.push(new Stack < T > (this.maxHeight));
     }
     let top = this.stackArray[this.stackArray.length - 1];
     if (top.size === this.maxHeight) {
-      top = new Stack<T>(this.maxHeight);
+      top = new Stack < T > (this.maxHeight);
       this.stackArray.push(top);
     }
     top.push(t);
@@ -46,10 +46,10 @@ export class SetOfStacks<T> {
   }
 }
 
-class Stack<T> {
+class Stack {
   readonly _arr: T[] = [];
 
-  constructor(private readonly maxHeight: number) {}
+  constructor(private readonly maxHeight: number) { }
 
   push(t: T) {
     if (this._arr.length > this.maxHeight) {
