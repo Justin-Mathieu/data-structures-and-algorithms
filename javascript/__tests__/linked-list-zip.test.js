@@ -1,4 +1,4 @@
-const LinkedList = require('../linked-list/LinkedList');
+const LinkedList = require('../code-challenges/linked-list-implementation');
 
 describe('linked list', () => {
   describe('zip', () => {

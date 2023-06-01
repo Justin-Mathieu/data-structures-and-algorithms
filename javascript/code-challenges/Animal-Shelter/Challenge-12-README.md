@@ -1,11 +1,11 @@
- # Code Challenge 10(Stacks and Queues)
+# Code Challenge 10(Stacks and Queues)
+
 Write dequeue and enqueue methods on the animal shelter class that contains dogs and cats.
 If arguments are not provided then return the first aniumal in the queue if the argument specifies dog or cat return the next dog or cat in the queue. 
 
 ## Whiteboard Process
 
-![Code Challenge 12](../linked-list/img/cc12.png)
-
+![Code Challenge 12](../../assets/CC12Whiteboard.png)
 
 ## Approach & Efficiency  
 
@@ -20,4 +20,4 @@ Methods on the Animal shelter class.
 
 ### Collaborators
 
-- David Souther  
+Hayden Cooper

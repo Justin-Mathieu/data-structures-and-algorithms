@@ -1,5 +1,5 @@
 const Stack = require('./stack');
-const Node = require('../linked-list/LinkedList');
+const Node = require('../linked-list-implementation');
 
 
 

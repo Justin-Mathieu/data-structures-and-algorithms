@@ -1,4 +1,4 @@
-import { SetOfStacks } from "../stacks-queues/setofstacks.js";
+const SetOfStacks = require('../code-challenges/set-of-stacks');
 
 describe("SetOfStacks", () => {
   it("peeks and pops", () => {

@@ -1,4 +1,4 @@
-const balancedBrackets = require('../src/stacks-queues/brackets');
+const balancedBrackets = require('../code-challenges/bracket-validation');
 
 describe('Balanced Brackets', () => {
   it.each([
