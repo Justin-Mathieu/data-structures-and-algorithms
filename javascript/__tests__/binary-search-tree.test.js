@@ -1,5 +1,5 @@
 
-const { BinarySearchTree } = require('../code-challenges/binary-search-tree');
+const { BinarySearchTree } = require('../code-challenges/binary-tree/binary-search-tree');
 
 describe('Binary Search Tree', () => {
   const tree = new BinarySearchTree();

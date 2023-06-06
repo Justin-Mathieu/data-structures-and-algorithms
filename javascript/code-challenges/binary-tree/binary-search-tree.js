@@ -1,4 +1,4 @@
-const { Node, BinaryTree } = require('../../binaryTree.js');
+const { Node, BinaryTree } = require('./index');
 
 class BinarySearchTree extends BinaryTree {
   add(number) {
@@ -25,6 +25,16 @@ class BinarySearchTree extends BinaryTree {
 
     }
   }
+
+  contains(value) {
+    let orderedTree = this.preOrder(this.root);
+    if (orderedTree.includes(value)) {
+      return true;
+    }
+    else { return false; }
+
+  }
 }
+
 
 module.exports = { BinarySearchTree };
