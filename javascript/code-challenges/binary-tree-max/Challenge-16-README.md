@@ -4,7 +4,7 @@ Write a Method on the binary tree class that finds the max value in the tree.
 
 ## Whiteboard Process
 
-![Code Challenge 16](./img/cc16.png)
+![Code Challenge 16](./cc16.png)
 
 ## Approach & Efficiency
 

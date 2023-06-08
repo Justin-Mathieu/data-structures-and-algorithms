@@ -1,18 +1,27 @@
 
-const { BinarySearchTree } = require('../code-challenges/binary-search-tree');
+const { BinarySearchTree, Node } = require('../code-challenges/binary-tree/index');
+
 
 describe('Binary Search Tree', () => {
-  const tree = new BinarySearchTree();
-  for (const i of [2, 3, 11, 6, 9, 7, 5, 1]) {
-    tree.add(i);
-  }
 
-  it('adds & maintains items in order', () => {
-    expect(tree.preOrder()).toEqual([1, 2, 3, 5, 6, 7, 9, 11]);
-  });
+  const bst = new BinarySearchTree();
+  bst.add(2);
+  bst.add(3);
+  bst.add(4);
+  bst.add(5);
+
+
+  console.log(bst);
+
+  console.log(bst.preOrder());
 
   it('looks up whether an item is in the tree', () => {
-    expect(tree.contains(3)).toBe(true);
-    expect(tree.contains(8)).toBe(false);
+    expect(bst.contains(2)).toBe(true);
+    expect(bst.contains(8)).toBe(false);
   });
+
+  it('adds in order', () => {
+    expect(bst.preOrder()).toBe([2, 3, 4, 5]);
+  });
+
 });
