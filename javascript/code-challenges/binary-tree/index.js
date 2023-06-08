@@ -1,4 +1,5 @@
 'use strict';
+
 const { preOrder, postOrder, inOrder } = require('./traversal');
 class Node {
   constructor(value, left = null, right = null) {
@@ -9,8 +10,8 @@ class Node {
 
 }
 class BinaryTree {
-  constructor(root) {
-    this.root = root;
+  constructor() {
+    this.root = null;
   }
   preOrder() {
     let root = this.root;
@@ -66,64 +67,58 @@ class BinaryTree {
 }
 
 class BinarySearchTree extends BinaryTree {
-  constructor(root) {
-    super(root);
-  }
-  add(number) {
 
-    if (!this.root) {
-      this.root = new Node(number);
-    } else {
-      let root = this.root;
-
-
-      if (root.value < number) {
-        if (root.left === null) {
-          root.left = new Node(number);
-          return this;
-        }
-        let root = root.right;
-      } if (root.value < number) {
-        if (root.right === null) {
-          root.right = new Node(number);
-          return this;
-        }
+  add(value) {
+    if (this.root === null) {
+      this.root = new Node(value);
+      return;
+    }
+    let prev = null;
+    let curr = this.root;
+    while (curr) {
+      if (curr.value > value) {
+        prev = curr;
+        curr = curr.left;
+      }
+      else if (curr.value < value) {
+        prev = curr;
+        curr = curr.right;
       }
     }
+    if (prev.value > value) {
+      prev.left = new Node(value);
+    }
+    else {
+      prev.right = new Node(value);
+    }
+    return this;
   }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 
   contains(value) {
-    let root = this.root;
-    if (!root) {
-      return false;
-    }
-    if (root.value === value) {
-      return true;
-    }
-    if (root.left.value === value) {
-      return true;
-    }
-    if (root.right.value === value) {
-      return true;
-    }
-    else { return false; }
+    let stuff = inOrder(this.root);
+    return stuff.includes(value);
+
+    // let root = this.root;
+    // if (!root) {
+    //   return false;
+    // }
+    // if (root.value === value) {
+    //   return true;
+    // }
+    // if (root.left.value === value) {
+    //   return true;
+    // }
+    // if (root.right.value === value) {
+    //   return true;
+    // }
+    // else { return false; }
 
 
   }
+
 
 
 
