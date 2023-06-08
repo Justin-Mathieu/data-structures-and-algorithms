@@ -1,45 +1,45 @@
-const LinkedList = require('../code-challenges/linked-list-implementation');
+const { LinkedList } = require('../code-challenges/linked-list-implementation');
 
-describe('Linked List', () => {
-  it('can append an element', () => {
+//* Code challenge 06
+
+describe('Tests for linked list insertions', () => {
+  it('adds nodes to the end of the list', () => {
     const list = new LinkedList;
+    list.insert('test node 1');
+    list.insert('test node 2');
+    list.insert('test node 3');
+    list.append('test node end');
+    list.append('test node end');
 
-    list.insert('Frodo');
-    list.insert('Sam');
-    list.append('Pippin');
-    list.insert('Merry');
-
-    const str = list.toString();
-    expect(str).toEqual(
-      '{ Merry } -> { Sam } -> { Frodo } -> { Pippin } -> NULL'
+    expect(list.toString()).toEqual(
+      '{ test node 3 } -> { test node 2 } -> { test node 1 } -> { test node end } -> { test node end } -> NULL'
     );
   });
 
-  it('can insert before an element', () => {
+  it('inserts a node into the middle after node', () => {
     const list = new LinkedList;
-
-    list.insert('Frodo');
-    list.insert('Sam');
-    list.insert('Merry');
-
-    list.insertBefore('Sam', 'Pippin');
-
-    const str = list.toString();
-    expect(str).toEqual('{ Merry } -> { Pippin } -> { Sam } -> { Frodo } -> NULL');
-  });
-
-  it('can insert after an element', () => {
-    const list = new LinkedList;
-
-    list.insert('Frodo');
-    list.insert('Sam');
-    list.insert('Merry');
-
-    list.insertAfter('Sam', 'Pippin');
-
-    const str = list.toString();
-    expect(str).toEqual(
-      '{ Merry } -> { Sam } -> { Pippin } -> { Frodo } -> NULL'
+    list.insert('test node 1');
+    list.insert('test node 2');
+    list.insert('test node 3');
+    list.insertAfter('test node 2', 'test node insert after');
+    expect(list.toString()).toEqual(
+      '{ test node 3 } -> { test node 2 } -> { test node insert after } -> { test node 1 } -> NULL'
     );
   });
+
+  it('inserts a node into the middle before node', () => {
+    const list = new LinkedList;
+
+    list.insert('test node 1');
+    list.insert('test node 2');
+    list.insert('test node 3');
+    list.insertBefore('test node 2', 'test node before');
+
+    expect(list.toString()).toEqual(
+      '{ test node 3 } -> { test node before } -> { test node 2 } -> { test node 1 } -> NULL'
+    );
+  });
+
+
+
 });
