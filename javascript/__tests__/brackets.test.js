@@ -1,4 +1,4 @@
-const validateBrackets = require('../code-challenges/bracket-validation');
+const validateBrackets = require('../code-challenges/bracket-validation/index');
 
 
 describe('Validates brackets', () => {

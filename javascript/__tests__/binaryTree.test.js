@@ -1,4 +1,8 @@
-const { BinaryTree, Node, breadthFirst, treeFizzBuzz } = require('../code-challenges/binary-tree');
+const { BinaryTree, Node, } = require('../code-challenges/binary-tree');
+const { breadthFirst } = require('../code-challenges/binary-tree-breadth');
+const { fizzBuzz } = require('../code-challenges/fizz-buzz-tree');
+
+
 
 describe('Binary Tree', () => {
   const tree = new BinaryTree(
@@ -35,13 +39,9 @@ describe('Binary Tree', () => {
 
   });
 
-  it('does a breadth first trasversal', () => {
-    expect(breadthFirst(tree)).toEqual([1, 7, 9, 2, 6, 9, 3, 11, 5]);
-  });
-
   it('Replcaes values with FizzBuzz', () => {
-    console.log(treeFizzBuzz(tree));
-    expect(treeFizzBuzz(tree).postOrder()).toEqual(['2', 'Fizz', '11', 'Fizz', '7', 'Buzz', 'Fizz', 'Fizz', '1']);
+    console.log(fizzBuzz(tree));
+    expect(fizzBuzz(tree).postOrder()).toEqual(['2', 'Fizz', '11', 'Fizz', '7', 'Buzz', 'Fizz', 'Fizz', '1']);
   });
 });
 

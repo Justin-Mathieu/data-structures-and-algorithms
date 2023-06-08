@@ -4,7 +4,7 @@ Write a function that takes in a tree and returns an array with the node values 
 
 ## Whiteboard Process
 
-![Code Challenge 17](./img/cc17.png)
+![Code Challenge 17](./cc17.png)
 
 ## Approach & Efficiency
 
