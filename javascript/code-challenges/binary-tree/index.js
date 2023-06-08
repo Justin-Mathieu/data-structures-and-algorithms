@@ -10,8 +10,8 @@ class Node {
 
 }
 class BinaryTree {
-  constructor() {
-    this.root = null;
+  constructor(root = null) {
+    this.root = root;
   }
   preOrder() {
     let root = this.root;
@@ -100,28 +100,7 @@ class BinarySearchTree extends BinaryTree {
   contains(value) {
     let stuff = inOrder(this.root);
     return stuff.includes(value);
-
-    // let root = this.root;
-    // if (!root) {
-    //   return false;
-    // }
-    // if (root.value === value) {
-    //   return true;
-    // }
-    // if (root.left.value === value) {
-    //   return true;
-    // }
-    // if (root.right.value === value) {
-    //   return true;
-    // }
-    // else { return false; }
-
-
   }
-
-
-
-
 
 }
 
