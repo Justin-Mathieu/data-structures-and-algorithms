@@ -1,4 +1,5 @@
 
+
 class Node {
   constructor(value) {
     this.value = value;
@@ -11,28 +12,29 @@ class LinkedList {
     this.head = null;
   }
 
-  insert(item) {
+  insert(value) {
     this.head = {
-      value: item,
+      value: value,
       next: this.head,
     };
-    this.length += 1;
   }
 
-  includes(item) {
+  includes(value) {
     let current = this.head;
-    while (current !== undefined) {
-      if (current.value === item) {
+    while (current !== null) {
+      if (current.value === value) {
         return true;
       }
       current = current.next;
     }
     return false;
   }
+
+
   toString() {
     let current = this.head;
-    let str = "";
-    while (current !== undefined) {
+    let str = '';
+    while (current !== null) {
       str += `{ ${current.value} } -> `;
       current = current.next;
     }
@@ -42,8 +44,8 @@ class LinkedList {
   // Code challenge 06
   append(item) {
     let current = this.head;
-    const newNode = { value: item, next: undefined };
-    if (this.head === undefined) {
+    const newNode = new Node(item);
+    if (!this.head) {
       this.insert(item);
       return;
     } else {
@@ -52,7 +54,7 @@ class LinkedList {
       }
       current.next = newNode;
     }
-    this.length += 1;
+
   }
 
   insertBefore(value, item) {
@@ -60,7 +62,7 @@ class LinkedList {
     if (current.value === value) {
       this.insert(item);
     } else if (!this.includes(value)) {
-      return "Not found in list";
+      return 'Not found in list';
     } else {
       while (current.next.value !== value) {
         current = current.next;
@@ -73,19 +75,20 @@ class LinkedList {
   }
 
   insertAfter(value, item) {
-    let Node1 = { value: item, next: undefined };
-    let current = this.head;
-    if (current.value === value) {
-      current.next = Node1;
-    } else {
-      while (current.value !== value) {
-        current = current.next;
-      }
-      const stashed = current.next;
-      const newNode = { value: item, next: stashed };
-      current.next = newNode;
+    let newNode = new Node(item);
+    if (!this.head) {
+      this.head = newNode;
     }
-    this.length += 1;
+    let current = this.head;
+    while (current) {
+      if (current.value === value) {
+        newNode.next = current.next;
+        current.next = newNode;
+        return;
+      }
+      current = current.next;
+    }
+    current.next = newNode;
   }
 
   //Expertiment with kthFromEnd using an array (Probably not the best solution...)
@@ -96,7 +99,7 @@ class LinkedList {
     if (this.length <= k) {
       throw new Error('Not in list');
     } else {
-      while (current !== undefined) {
+      while (current !== null) {
         anArray.push(current.item);
         current = current.next;
       }
@@ -126,11 +129,11 @@ class LinkedList {
       counter += 1;
     }
 
-    if (currentll1 === undefined) {
+    if (currentll1 === null) {
       newList.append(currentll2.item);
       currentll1 = currentll2.next;
     }
-    if (currentll2 === undefined) {
+    if (currentll2 === null) {
       newList.append(currentll1.item);
       currentll2 = currentll1.next;
     }
@@ -138,4 +141,4 @@ class LinkedList {
   }
 }
 
-module.exports = LinkedList, Node;
+module.exports = { LinkedList, Node };
