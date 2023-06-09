@@ -1,4 +1,3 @@
-const { isThisTypeNode } = require('typescript');
 const { Node } = require('../linked-list-implementation');
 
 class Stack {
