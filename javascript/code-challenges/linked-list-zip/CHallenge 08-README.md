@@ -4,7 +4,6 @@
 Write a function that takes in two Linked lists and returns a new list with the nodes zipped together.
 
 ## Whiteboard Process
-
 ![Code Challenge 08](./CC08WhiteBoard.png)
 
 ## Approach & Efficiency
