@@ -108,37 +108,6 @@ class LinkedList {
       return anArray[k];
     }
   }
-
-  //Code Challenge 08 Zip
-  zip(list1, list2) {
-    let newList = new LinkedList;
-    let currentll1 = list1.head;
-    let currentll2 = list2.head;
-
-    let counter = 0;
-    while (currentll1 && currentll2) {
-      if (counter % 2 === 0) {
-        newList.append(currentll1.value);
-        currentll1 = currentll1.next;
-      }
-      if (counter % 2 !== 0) {
-        newList.append(currentll2.item);
-        currentll2 = currentll2.next;
-      }
-
-      counter += 1;
-    }
-
-    if (currentll1 === null) {
-      newList.append(currentll2.item);
-      currentll1 = currentll2.next;
-    }
-    if (currentll2 === null) {
-      newList.append(currentll1.item);
-      currentll2 = currentll1.next;
-    }
-    return newList;
-  }
 }
 
 module.exports = { LinkedList, Node };

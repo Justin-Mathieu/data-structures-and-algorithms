@@ -4,17 +4,13 @@ class Animal {
     this.species = species;
   }
 }
-
 class AnimalShelter {
   constructor() {
     this.queue = [];
   }
 
-
-
   enqueue(name, species) {
     this.queue.push(new Animal(name, species));
-    console.log(this.queue);
   }
 
   dequeue(pref) {

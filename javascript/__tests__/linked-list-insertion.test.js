@@ -1,7 +1,5 @@
 const { LinkedList } = require('../code-challenges/linked-list-implementation');
 
-//* Code challenge 06
-
 describe('Tests for linked list insertions', () => {
   it('adds nodes to the end of the list', () => {
     const list = new LinkedList;
@@ -39,7 +37,4 @@ describe('Tests for linked list insertions', () => {
       '{ test node 3 } -> { test node before } -> { test node 2 } -> { test node 1 } -> NULL'
     );
   });
-
-
-
 });

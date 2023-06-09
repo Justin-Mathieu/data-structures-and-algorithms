@@ -1,11 +1,6 @@
-const Queue = require('../code-challenges/stack-queue-implementation');
+const { Queue } = require('../code-challenges/stack-queue-implementation');
 
 describe('Queue', () => {
-  it('can enqueue', () => {
-    const q = new Queue();
-
-    expect(() => q.enqueue('Frodo')).not.toThrow();
-  });
 
   it('enqueues', () => {
     const q = new Queue();
@@ -13,30 +8,34 @@ describe('Queue', () => {
     q.enqueue('Frodo');
     q.enqueue('Sam');
 
-    expect(q.size).toBe(2);
-    expect(q.peek).toBe('Frodo');
+    expect(q.peek()).toBe('Frodo');
   });
 
-  xit('dequeues', () => {
+  it('dequeues', () => {
     const q = new Queue();
     q.enqueue('test1');
     q.enqueue('test2');
-    // q.enqueue("test3");
+    q.enqueue('test3');
+    q.enqueue('test4');
+    q.enqueue('test5');
+    q.enqueue('test6');
 
-    // expect(q.size).toBe(3);
-    expect(q.peek).toBe('test2');
 
+
+    console.log(q);
+    expect(q.peek()).toBe('test1');
     q.dequeue();
+    expect(q.peek()).toBe('test2');
 
-    expect(q.size).toBe(3);
+
   });
 
   it(' isEmpty returns a boolean', () => {
     const q = new Queue();
 
-    expect(q.isEmpty(q)).toBe(true);
+    expect(q.isEmpty()).toBe(true);
     q.enqueue('test1');
-    expect(q.isEmpty(q)).toBe(false);
+    expect(q.isEmpty()).toBe(false);
   });
 
   it('peek should return the value of the head node', () => {
@@ -44,6 +43,6 @@ describe('Queue', () => {
 
     q.enqueue('test');
 
-    expect(q.peek).toBe('test');
+    expect(q.peek()).toBe('test');
   });
 });
