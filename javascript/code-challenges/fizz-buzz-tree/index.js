@@ -1,34 +1,26 @@
+const { Queue } = require('../stack-queue-implementation');
+
 function fizzBuzz(tree) {
-  if (!tree.root) {
-    return null;
-  }
-  let root = tree.root;
-  let queue = [];
-  queue.push(root);
-
-  while (queue.length > 0) {
-    let front = queue.shift();
-    if (front.value % 3 === 0) {
-      front.value = 'Fizz';
+  let queue = new Queue();
+  let current = tree.root;
+  queue.enqueue(current);
+  while (current) {
+    current = queue.dequeue();
+    if (current?.value % 3 === 0 && current?.value % 5 === 0) {
+      current.value = "FizzBuzz";
+    } else if (current?.value % 3 === 0) {
+      current.value = "Fizz";
+    } else if (current?.value % 5 === 0) {
+      current.value = "Buzz";
+    } else if (typeof current?.value === 'number') {
+      current.value = `${current?.value}`
     }
-    if (front.value % 5 === 0) {
-      front.value = 'Buzz';
+    for (let i = 0; i < current?.child.length; i++) {
+      queue.enqueue(current.child[i]);
     }
-    if (front.value % 3 === 0 && front.value % 5 === 0) {
-      front.value = 'FizzBuzz';
-    } else { front.value = front.value.toString(); }
-
-    if (front.left) {
-      queue.push(front.left);
-    }
-
-    if (front.right) {
-      queue.push(front.right);
-    }
-
   }
   return tree;
-
 }
+
 
 module.exports = { fizzBuzz };

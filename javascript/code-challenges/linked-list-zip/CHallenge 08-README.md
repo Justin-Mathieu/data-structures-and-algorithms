@@ -5,7 +5,12 @@ Write a function that takes in two Linked lists and returns a new list with the 
 
 ## Whiteboard Process
 
-![Code Challenge 08](../../assets/CC08WhiteBoard.png)
+## Code Challenge 05(Linked List Implementation)
+
+Write a functiopn tthat takes in two linked lists and zips them together.
+Returns a new linked list.
+
+![Code Challenge 08](./CC08WhiteBoard.png)
 
 ## Approach & Efficiency
 

@@ -12,11 +12,6 @@ describe('Binary Search Tree', () => {
   bst.add(0);
   bst.add(9);
 
-
-  console.log(bst);
-
-  console.log(bst.preOrder());
-
   it('looks up whether an item is in the tree', () => {
     expect(bst.contains(2)).toBe(false);
     expect(bst.contains(8)).toBe(true);

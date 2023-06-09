@@ -1,6 +1,9 @@
+const { isThisTypeNode } = require('typescript');
+const { Node } = require('../linked-list-implementation');
+
 class Stack {
-  constructor(top) {
-    this.top = top;
+  constructor() {
+    this.top = null;
   }
   get size() {
     let size = 0;
@@ -23,8 +26,8 @@ class Stack {
   }
 
   push(value) {
-    let newNode = { item: value, next: this.top };
-    this.top = newNode;
+
+    this.top = new Node(value);
   }
 
   pop() {
@@ -46,8 +49,9 @@ class Stack {
 }
 
 class Queue {
-  constructor(front) {
-    this.front = front;
+  constructor() {
+    this.front = null;
+    this.back = null;
 
   }
 
@@ -62,38 +66,42 @@ class Queue {
     return size;
   }
 
-  get peek() {
-    if (this.front !== undefined) {
-      return this.front.item;
+  peek() {
+    if (this.front) {
+      return this.front.value;
     } else {
       throw new Error('Empty list');
     }
   }
 
-  enqueue(t) {
-    let newNode = { item: t, next: undefined };
-
-    if (this.front === undefined) {
-      this.front = newNode;
+  enqueue(value) {
+    if (!this.front) {
+      this.front = new Node(value);
     } else {
       while (this.front.next) {
         this.front = this.front.next;
       }
-      this.front.next = newNode;
+      this.front.next = new Node(value);
     }
+
   }
+
 
   dequeue() {
-    if (this.front !== undefined) {
+    let save;
+    if (this.front) {
+      save = this.front.value;
+      if (this.front === this.back) {
+        this.back = null;
+      }
       this.front = this.front.next;
-    } else {
-      throw new Error('Empty list');
     }
-    return this.front.item;
+    return save;
   }
 
-  isEmpty(queue) {
-    if (queue.front !== undefined) {
+
+  isEmpty() {
+    if (this.front !== null) {
       return false;
     } else {
       return true;
@@ -101,4 +109,4 @@ class Queue {
   }
 }
 
-module.exports = Stack, Queue;
+module.exports = { Stack, Queue };
