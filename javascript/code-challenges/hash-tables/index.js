@@ -26,6 +26,7 @@ class HashTable {
     if (this.buckets[index]) {
       return this.buckets[index][key];
     }
+    else { return null; }
   }
 
   has(key) {
