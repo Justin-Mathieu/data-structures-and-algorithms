@@ -24,12 +24,4 @@ function compareTitle(a, b) {
   return aTitle.localeCompare(bTitle);
 }
 
-
-
-
-
-
-
-
-
 module.exports = { sortYear, compareYear, sortTitle, compareTitle };
