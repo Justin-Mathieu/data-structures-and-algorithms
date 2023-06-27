@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "get-challenge": "`which bash` ./code-challenges/bin/get-challenge.sh",
-    "test": "jest sort.test.js",
+    "test": "jest hash.test.js",
     "lint": "eslint '**/*.js'"
   },
   "author": "",
