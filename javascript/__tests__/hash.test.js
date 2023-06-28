@@ -14,7 +14,6 @@ describe('Hash Table', () => {
     expect(table.get('testGet')).toEqual({ thing: 'TEST' });
   });
 
-  // Only returns undefined...
   test('Returns null for a value that does not exist', () => {
     let table = new HashTable(1024);
     table.set('testNull', { thing: 'tested' });
